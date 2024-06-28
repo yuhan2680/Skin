@@ -1,0 +1,113 @@
+{
+    // 版本信息字段，当前必须为 2，此版本添加了 PBR 的支持
+    "spec": 2,
+    // 可选字段，会作为游戏内模型切换界面的文本提示和详情界面显示出来
+    "metadata": {
+      // 只有 name 是必选字段，其它都是可选
+      "name": "xiaohan",
+      // 接受用 \n 进行换行
+      "tips": "小涵の个人模型",
+      "license": {
+        // 必选字段
+        "type": "CC 0",
+        // 接受换行
+        "desc:": "更多许可描述"
+      },
+      // 读取时保留顺序
+      "authors": [
+        {
+          // 只有 name 是必选字段，其它都是可选
+          "name": "神楽坂小涵",
+          // 模型详情页展示作者头像
+          "avatar": "avatar/profile.png",
+          "role": "作者",
+          // 支持任意类型，不局限于给出的这两个。读取时保留顺序
+          "contact": {
+            "Twitter": "@yuhan2680",
+            "email": "yuhan2680@qq.com"
+          },
+          // 不接受换行
+          "comment": "欢迎提出意见~"
+        },
+        // 可以添加多个作者
+        /*
+        {
+          "name": "作者2"
+        }
+          */
+      ],
+      // 目前仅支持这两个
+      "link": {
+        "bilibili": "https://space.bilibili.com/549633102",
+        "donate": "https://afdian.net/a/yuhan2680"
+      }
+    },
+    // 可选字段，内部所有字段都是可选
+    "properties": {
+      // 模型缩放，默认为 0.7
+      "height_scale": 0.7,
+      // 模型缩放，默认为 0.7
+      "width_scale": 0.7,
+      // 可任意调整数量、顺序和名称（不局限于 extra+数字）。读取时保留顺序
+      // 不限数量，超过 8 个也能正常播放了
+      "extra_animation": {
+        "extra0": "",
+        "extra1": "打招呼",
+        "run": "润",
+        "walk": "跑路",
+        "extra4": "",
+        "extra5": "",
+        "extra6": "",
+        "extra7": ""
+      },
+      // 在模型选择界面播放的预览动画
+      "preview_animation": "idle",
+      // 默认材质名称（不含路径和后缀.png），在模型选择界面展示，以及在玩家切换至该模型时默认使用。
+      "default_texture": "default",
+      // 此字段为 true 后，无法将其设置为授权模型
+      "free": false
+    },
+    // 必须的字段
+    "files": {
+      // 主模型文件
+      "player": {
+        "model": {
+          // 路径和文件名都可以自定义，注意严格区分大小写，即使是在 windows 上
+          "main": "models/main.json",
+          "arm": "models/arm.json"
+        },
+        // 可选字段，内部五个字段也都是可选
+        // 没有的话，会自动调用默认模型
+        "animation": {
+          "main": "animations/main.animation.json",
+          "arm": "animations/arm.animation.json",
+          "extra": "animations/extra.animation.json",
+          "tac": "animations/tac.animation.json",
+          "carryon": "animations/carryon.animation.json"
+        },
+        // 读取时保留顺序
+        "texture": [
+          // 可以直接书写材质路径
+          "textures/xiaohan_texture.png",
+          // 也可以写成这样的形式
+          {
+            // 仅 uv 字段必选，以下两种 PBR 材质为可选
+            "uv": "textures/blue.png",
+            // Oculus 和 Iris PBR 支持
+            //"normal": "textures/pbr/blue_n.png",
+            //"specular": "textures/pbr/blue_s.png"
+          }
+        ]
+      },
+      /*
+      // 可选字段，替换箭的渲染
+      "arrow": {
+        "model": "models/arrow.json",
+        // 可选字段
+        "animation": "animations/arrow.animation.json",
+        // 同样支持 PBR
+        "texture": "textures/arrow.png"
+      }
+        */
+    }
+  }
