@@ -1,6 +1,11 @@
-这是一个记录MC皮肤的库~
-主要是记录自己的皮肤，不过也欢迎大家PR~
+# 一个记录MC皮肤的库
+
+# Here is a repository that stores Minecraft skins
+
+你可以在这里存放自己的皮肤，欢迎PR~
+
 把这里发展成皮肤库也不是不行w
-Here is a repository that stores Minecraft skins~
-Create for record my own skin, but PR welcome
+
+You can put your Minecraft skin here, PR welcome~
+
 Make it becomes a skin library is also fine =w=
